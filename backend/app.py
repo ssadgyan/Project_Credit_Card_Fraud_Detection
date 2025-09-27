@@ -98,12 +98,15 @@ def predict():
 
 
 # Google Login
+# Google Login
 @app.route("/google-login", methods=["POST"])
 def google_login():
     token_id = request.json.get("tokenId")
     try:
         idinfo = id_token.verify_oauth2_token(
-            token_id, grequests.Request(),"105149798415-0b8s1bet2k0c2uce5ga4rifdmp04s572.apps.googleusercontent.com"
+            token_id,
+            grequests.Request(),
+            "105149798415-0b8s1bet2k0c2uce5ga4rifdmp04s572.apps.googleusercontent.com"
         )
         email = idinfo['email']
         if not users_collection.find_one({"email": email}):
@@ -111,6 +114,8 @@ def google_login():
         token = create_token(email)
         return jsonify({"msg": "Google login successful", "token": token})
     except Exception as e:
+        # Debug print
+        print("Google verification error:", str(e))  
         return jsonify({"msg": "Google login failed", "error": str(e)}), 401
 
 
