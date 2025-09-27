@@ -153,3 +153,6 @@ Deploy ML model & backend to Cloud (AWS/Heroku)
 Use XGBoost / LightGBM for improved recall
 Add Explainability (SHAP/LIME) for fraud reasons
 Live streaming detection from bank transaction APIs
+
+
+Thanks for using my project
