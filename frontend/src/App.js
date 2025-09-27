@@ -75,7 +75,7 @@ function Navbar({ isLoggedIn, handleLogout }) {
           {/* Logo + Brand + Tagline */}
           <div style={{ display: "flex", alignItems: "center" }}>
             <img 
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Fraud Guardian Logo"
               style={{ width: "45px", height: "45px", marginRight: "10px", borderRadius: "50%" }}
             />
