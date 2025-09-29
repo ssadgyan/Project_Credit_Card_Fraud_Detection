@@ -8,7 +8,7 @@ coverage/
 
 # production
 build/
-config.py
+backend/config.py
 
 # frontend
 frontend/.env
