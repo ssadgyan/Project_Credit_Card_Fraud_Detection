@@ -9,6 +9,8 @@ coverage/
 # production
 build/
 backend/config.py
+backend/.env
+backend/__pycache__/
 *.env
 
 # frontend
