@@ -31,6 +31,10 @@ def verify_token(token):
 
 # ---------------- ROUTES ---------------- #
 
+@app.route("/")
+def home():
+    return "✅ Backend is live and working!"
+
 # Signup
 @app.route("/signup", methods=["POST"])
 def signup():
